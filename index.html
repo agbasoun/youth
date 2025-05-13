@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouthGigs - Find Local Gigs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple animation for gig cards on hover */
+        .gig-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-gradient-to-r from-teal-500 to-cyan-600 text-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <a href="#" class="text-3xl font-bold mb-2 sm:mb-0">YouthGigs</a>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-teal-200 px-3 py-2 rounded-md text-sm font-medium">Browse Gigs</a>
+                <a href="#" class="bg-white text-teal-600 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium shadow">Post a Gig</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <section class="mb-8 p-6 bg-white rounded-lg shadow">
+            <h2 class="text-xl font-semibold mb-4 text-gray-700">Find a Gig Near You</h2>
+            <div class="flex flex-col md:flex-row gap-4">
+                <input type="text" placeholder="Enter your Zip Code or City" class="flex-grow p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
+                <select class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 md:w-1/4">
+                    <option value="">All Categories</option>
+                    <option value="lawn">Lawn Care</option>
+                    <option value="cleaning">Cleaning/Washing</option>
+                    <option value="pets">Pet Sitting/Walking</option>
+                    <option value="babysitting">Babysitting</option>
+                    <option value="tutoring">Tutoring</option>
+                    <option value="tech">Tech Help</option>
+                    <option value="creative">Creative (Art, Design)</option>
+                    <option value="other">Other</option>
+                </select>
+                <button class="bg-teal-500 hover:bg-teal-600 text-white font-semibold p-3 rounded-md shadow transition duration-150 ease-in-out">Search</button>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-6 text-gray-800">Available Gigs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="gig-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-teal-700">Mow My Lawn Weekly</h3>
+                        <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Category:</span> Lawn Care</p>
+                        <p class="text-sm text-gray-600 mb-3"><span class="font-medium">Location:</span> Sunnyvale, CA</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">Need someone reliable to mow the front and back lawn every Saturday morning. Mower provided. Should take about 1-2 hours.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-green-600">$30</span>
+                            <a href="#" class="bg-cyan-500 hover:bg-cyan-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow transition duration-150 ease-in-out">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gig-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-teal-700">Wash My SUV</h3>
+                        <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Category:</span> Cleaning/Washing</p>
+                        <p class="text-sm text-gray-600 mb-3"><span class="font-medium">Location:</span> Mountain View, CA</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">Looking for someone to give my SUV a good wash and interior vacuum this weekend. Cleaning supplies provided. Flexible timing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-green-600">$25</span>
+                            <a href="#" class="bg-cyan-500 hover:bg-cyan-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow transition duration-150 ease-in-out">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gig-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-teal-700">Babysitter Needed Friday Night</h3>
+                        <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Category:</span> Babysitting</p>
+                        <p class="text-sm text-gray-600 mb-3"><span class="font-medium">Location:</span> Palo Alto, CA</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">Need a responsible sitter for our 2 kids (ages 6 and 9) this Friday from 6 PM to 10 PM. Must be comfortable with pets (we have a friendly dog).</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-green-600">$18/hour</span>
+                            <a href="#" class="bg-cyan-500 hover:bg-cyan-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow transition duration-150 ease-in-out">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="gig-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-teal-700">Help Painting a Fence</h3>
+                        <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Category:</span> Other</p>
+                        <p class="text-sm text-gray-600 mb-3"><span class="font-medium">Location:</span> Redwood City, CA</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">Need an extra pair of hands to help paint our backyard fence. All supplies provided. Should take most of Saturday. Lunch included!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-green-600">$100</span>
+                            <a href="#" class="bg-cyan-500 hover:bg-cyan-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow transition duration-150 ease-in-out">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="gig-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-teal-700">Walk Energetic Dog</h3>
+                        <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Category:</span> Pet Sitting/Walking</p>
+                        <p class="text-sm text-gray-600 mb-3"><span class="font-medium">Location:</span> San Jose, CA</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">Looking for someone to walk our friendly but energetic Labrador for an hour, 3 times a week (Mon, Wed, Fri) after school around 4 PM.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-green-600">$15/walk</span>
+                            <a href="#" class="bg-cyan-500 hover:bg-cyan-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow transition duration-150 ease-in-out">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="gig-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2 text-teal-700">Help Setting Up Smart Home Devices</h3>
+                        <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Category:</span> Tech Help</p>
+                        <p class="text-sm text-gray-600 mb-3"><span class="font-medium">Location:</span> Cupertino, CA</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">Need some help connecting a new smart speaker and light bulbs to my Wi-Fi network. Should be quick for someone tech-savvy!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-green-600">$40</span>
+                            <a href="#" class="bg-cyan-500 hover:bg-cyan-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow transition duration-150 ease-in-out">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div> </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 mt-12 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2025 YouthGigs. Connecting local youth with opportunities.</p>
+            <div class="mt-2">
+                <a href="#" class="text-sm hover:text-white mx-2">About Us</a> |
+                <a href="#" class="text-sm hover:text-white mx-2">Terms of Service</a> |
+                <a href="#" class="text-sm hover:text-white mx-2">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
